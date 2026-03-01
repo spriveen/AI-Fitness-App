@@ -8,7 +8,8 @@ const AppContext = createContext(initialState)
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
 
   const navigate = useNavigate()
-  const [user, setUser] = useState<User>(null)
+  // const [user, setUser] = useState<User>(null)
+  const [user, setUser] = useState<User | null>(null)
   const [isUserFetched, setIsUserFetched] = useState(false)
   const [onboardingCompleted, setOnboardingCompleted] = useState(false)
   const [allFoodLogs, setAllFoodLogs] = useState<FoodEntry[]>()
